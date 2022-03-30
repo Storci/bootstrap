@@ -5,6 +5,10 @@ import * as fb from "./Global/Firebase/firebase_auth_module.js"
 // il risultato è http(s)://xxx.xxx.xxx.xxx:xxxx
 // baseURL verrà utilizzato come base per il cambio pagina.
 let baseURL = window.location.protocol + "//" + window.location.host
+if(window.location.protocol == 'https:'){
+	baseURL = window.location.protocol + "//" + window.location.host + '/bootstrap'
+}
+
 // Nasconde il messaggio di errore.
 $("#IDErrorMessage").hide()
 

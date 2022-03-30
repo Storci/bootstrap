@@ -5,6 +5,10 @@ import * as lang from "../../../../Global/Common/Translation.js"
 import * as common from "../../../../Global/Common/commonFunctions.js"
 
 let baseURL = window.location.protocol + "//" + window.location.host
+if(window.location.protocol == 'https:'){
+	baseURL = window.location.protocol + "//" + window.location.host + '/bootstrap'
+}
+
 
 // Nasconde il messaggio di errore nel momento in cui digito qualcosa di diverso nei vari campi
 $('.form-control').on('input', function(){

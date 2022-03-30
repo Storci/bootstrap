@@ -9,6 +9,10 @@ import * as common from "../../../../Global/Common/commonFunctions.js"
 // il risultato è http(s)://xxx.xxx.xxx.xxx:xxxx
 // baseURL verrà utilizzato come base per il cambio pagina.
 let baseURL = window.location.protocol + "//" + window.location.host
+if(window.location.protocol == 'https:'){
+	baseURL = window.location.protocol + "//" + window.location.host + '/bootstrap'
+}
+
 let pageURL = window.location.href
 // Recupera il nome dell'utente da firebase, controlla che sia loggato.
 // Nel caso non fosse loggato richiama la pagina di login
