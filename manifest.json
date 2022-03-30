@@ -1,0 +1,1 @@
+{"short_name":"Test","name":"Test","icons":[{"src":"/assets/img/example.png","type":"image/png","sizes":"1024x1024","purpose":"any maskable"},{"src":"/assets/img/example.png","type":"image/png","sizes":"1024x1024","purpose":"any maskable"}],"start_url":"index.html","background_color":"#ffffff","theme_color":"#ffffff","display":"standalone","orientation":"portrait"}
