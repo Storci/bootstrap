@@ -85,7 +85,7 @@ function onAuthStateChanged_2(baseURL, pageURL){
   	if(!user){
 			localStorage.setItem('urlPage', pageURL)
 			console.log(baseURL)
-			//window.location.href = baseURL + "/login.html"
+			window.location.href = baseURL + "/login.html"
 		}
 		localStorage.setItem('user', user)
 	});
