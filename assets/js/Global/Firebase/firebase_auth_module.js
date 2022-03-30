@@ -84,7 +84,8 @@ function onAuthStateChanged_2(baseURL, pageURL){
 	firebase.auth().onAuthStateChanged((user) => {
   	if(!user){
 			localStorage.setItem('urlPage', pageURL)
-			window.location.href = baseURL + "/login.html"
+			console.log(baseURL)
+			//window.location.href = baseURL + "/login.html"
 		}
 		localStorage.setItem('user', user)
 	});
