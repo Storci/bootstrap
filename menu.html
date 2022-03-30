@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" style="background: #ffffff;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Storci IoT</title>
+    <meta name="theme-color" content="#004071">
+    <link rel="icon" type="image/png" sizes="1024x1024" href="assets/img/Storci_Logo_1024_1024.png">
+    <link rel="icon" type="image/png" sizes="1024x1024" href="assets/img/Storci_Logo_1024_1024.png">
+    <link rel="icon" type="image/png" sizes="1024x1024" href="assets/img/Storci_Logo_1024_1024.png">
+    <link rel="icon" type="image/png" sizes="1024x1024" href="assets/img/Storci_Logo_1024_1024.png">
+    <link rel="icon" type="image/png" sizes="1024x1024" href="assets/img/Storci_Logo_1024_1024.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/storci-card-effect.css">
+    <link rel="stylesheet" href="assets/css/storci-animation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Pages/Test/Test_01.css">
+    <link rel="stylesheet" href="assets/css/Storci_NavBar.css">
+    <link rel="stylesheet" href="assets/css/storci-styles.css">
+    <link rel="stylesheet" href="assets/css/test.css">
+<!-- carica l'immagine da usare nell'icona dell'iphone -->
+<link rel="apple-touch-icon" href="/assets/img/Storci_Logo_1024_1024.png">
+
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
+
+<!-- Animation Library -->
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+<!-- AM4CORE CHART -->
+<script defer src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script defer src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script defer src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<script defer src="https://cdn.amcharts.com/lib/4/themes/dark.js"></script>
+<script defer src="//cdn.amcharts.com/lib/4/plugins/rangeSelector.js"></script> 
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script> 
+  var firebaseConfig = {
+    apiKey: "AIzaSyB6L_2pDhDz1RXHA5ZA8g9hsU9e4EOHGvU",
+    authDomain: "storci-thingworx-ui.firebaseapp.com",
+    projectId: "storci-thingworx-ui",
+    storageBucket: "storci-thingworx-ui.appspot.com",
+    messagingSenderId: "1040048598489",
+    appId: "1:1040048598489:web:81d20e1907671b25aabdc8",
+    measurementId: "G-8KW275718B"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</head>
+
+<body style="background: #fffdfd;/*overflow-x: hidden;*/">
+    <nav class="navbar navbar-light navbar-expand-md nav-bar" style="background: #004071;border-bottom: 2px solid #333;">
+        <div class="container-fluid"><img src="assets/img/Storci_Logo_1024_1024.png" style="width: 100px;height: 75px;"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="color: rgba(248,244,244,0.55);"><i class="fas fa-bars" style="color: #ffffff;"></i><span class="visually-hidden">Toggle navigation</span></button>
+            <div class="collapse navbar-collapse d-md-flex justify-content-md-end" id="navcol-1">
+                <ul class="navbar-nav border-line-nav-collapse" style="text-align: center;margin: 0px;margin-left: 0px;padding: 0px;padding-left: 0px;padding-right: 40px;/*box-shadow: 3px 3px rgb(49,49,50);*/">
+                    <li class="nav-item"></li>
+                    <li class="nav-item dropdown" style="color: rgb(208,213,218);"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: #ffffff;">User</a>
+                        <div class="dropdown-menu storci_dropDown" style="padding: 7px 1px;padding-left: 0px;padding-top: 5px;padding-right: 27px;background-color: #004071;color: #ffffff;box-shadow: 1px 1px #232121;">
+                            <div class="form-check form-switch form-check-inline" style="padding-left: 1rem;"><input class="form-check-input" type="checkbox" id="formCheck-1" onclick="ChangeMode()"><label class="form-check-label" for="formCheck-1" style="color: #ffff;">Dark Mode</label></div>
+                            <div class="form-check form-switch" style="margin-bottom: 0px;margin-right: 0px;"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Enable&nbsp;</label></div><a class="dropdown-item" id="IDNavItemLogout" href="#" style="color: #ffffff;font-size: 13px;"><i class="fas fa-sign-out-alt" style="color: #ffffff;"></i>&nbsp;Logout</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item" id="IDNavItemLogin"><a class="nav-link" id="IDNavItemLogin" href="../General/login.html" style="color: #ffff;">Login&nbsp;<i class="fa fa-sign-in"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="toast fade text-end hide" role="alert" id="mytoast" style="/*height: 50px;*//*width: 200px;*//*position: absolute;*//*float: right;*//*position: absolute;*//*bottom: -15rem;*//*padding: 0px;*//*text-align: center;*//*margin-left: 0px;*//*margin-right: 12px;*/">
+        <div class="toast-header"><img class="me-2"><strong class="me-auto">Title</strong><small>10 min ago</small><button class="btn-close d-flex justify-content-end align-items-start ms-2 mb-1 close" data-bs-dismiss="toast" style="font-size: 10px;margin-top: 5px;"></button></div>
+        <div class="toast-body" role="alert" style="background: #eae9e9;">
+            <p style="height: 20px;width: 186px;text-align: left;">bus ac facilisis in, egestas eget quam. Donec id eon mv.</p>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/Global/Common/navbar.js"></script>
+    <script src="assets/js/Global/Common/ScrollTop.js"></script>
+    <script src="assets/js/Global/Common/Theme.mjs" type="module"></script>
+    <script src="assets/js/Global/Common/Translation.mjs" type="module"></script>
+    <script src="assets/js/Test/page_notificationTest.js"></script>
+    <script src="assets/js/Customers/CustomerInfo/info_bk.mjs" type="module"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/sw.mjs" type="module"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>

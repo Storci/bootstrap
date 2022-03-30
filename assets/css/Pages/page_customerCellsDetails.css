@@ -1,0 +1,65 @@
+/* MOD 1 - Sovvrascrive alcune caratteristiche della tabella */
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  --bs-table-accent-bg: var(--bs-table-alternate-row);
+  color: var(--bs-table-alternate-row-text-color);
+}
+
+.table-striped > tbody > tr:nth-of-type(odd):hover {
+  --bs-table-accent-bg: var(--bs-table-alternate-row-hover);
+  color: var(--bs-table-alternate-row-text-color-hover);
+}
+
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-accent-bg: transparent;
+  --bs-table-striped-color: var(--bs-table-alternate-row-text-color);
+  --bs-table-striped-bg: var(--bs-table-alternate-row);
+  --bs-table-active-color: #212529;
+  --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+  --bs-table-hover-color: var(--bs-table-row-text-color-hover);
+  --bs-table-hover-bg: var(--bs-table-row-hover);
+  width: 100%;
+  margin-bottom: 1rem;
+  color: var(--bs-table-row-text-color);
+  vertical-align: top;
+  border-color: #dee2e6;
+}
+
+/* FINE MOD 1 */
+
+@media (min-width: 1200px) {
+  #IDDivBody {
+    padding: 20px 150px 150px;
+  }
+}
+
+@media (min-width: 300px) {
+  .card-value {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 300px) {
+  card-title {
+    font-size: 14px;
+  }
+}
+
+.highlight {
+  background-color: #25476a;
+}
+
+.result {
+  font-size: 20px !important;
+  color: var(--bs-gray-600);
+  border: none;
+  font-weight: 650;
+  text-align: right;
+}
+
+.fixed-number {
+  color: var(--bs-gray-500);
+  font-size: 20px;
+}
+

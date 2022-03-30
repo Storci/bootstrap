@@ -1,0 +1,49 @@
+@media (min-width: 992px) {
+  #IDRow {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+}
+
+@media (min-width: 576px) {
+  .column_form {
+    width: 400px !important;
+  }
+}
+
+@media (min-width: 300px) {
+  .column_form {
+    width: 300px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .column_form {
+    width: 50% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .head_form {
+    font-size: 18px !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .head_form {
+    font-size: 14px !important;
+  }
+}
+
+@media (min-width: 300px) {
+  .head_form {
+    font-size: 15px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .head_form {
+    font-size: 20px!important;
+  }
+}
+
