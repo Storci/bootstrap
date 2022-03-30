@@ -3,7 +3,7 @@
 // ***************************************
 if ('serviceWorker' in navigator) {
  // Path che contiene il service worker
- navigator.serviceWorker.register('/assets/js/sw.mjs')
+ navigator.serviceWorker.register('bootstrap/assets/js/sw.mjs')
  .then(reg => {
    console.log('Service worker installato correttamente: ', reg);
 
