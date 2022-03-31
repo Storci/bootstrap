@@ -75,7 +75,10 @@ function createCard(customerList){
 		// Recupera l'immagine del cliente
 		let image = baseURL + "/assets/img/Loghi/" + customerName + "." + "svg"
 		// Carica un'immagine base nel caso l'immagine del cliente non venga trovata
-		let onerror = "javascript:this.src='/assets/img/image_black_48dp.svg'"
+		let onerror = "javascript:this.src='../assets/img/Icone/Dark/insert_photo_black_48dp.svg'"
+		if(window.location.protocol == 'https:'){
+			onerror = "javascript:this.src='/assets/img/insert_photo_black_48dp.svg'"
+		}
 		// Genera l'html della card
 		let card =	'	<div id="' + id + 'Column" class="col col-customer">'
 		card  +=	'	  <div id="' + id + '" class="card card-hover ripple h-100 card-border">'
